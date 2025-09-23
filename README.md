@@ -68,3 +68,72 @@ Where:
 - Rt = return for the day
 
 **Why**: Measures how much a stock increased or decreased in one day — the foundation for all quant calculations.
+Steps to follow:
+
+1. Import Dependencies
+   ```python
+    import pandas as pd
+    import yfinance as yf
+    import matplotlib.pyplot as plt
+
+2. Fetch historical stock data
+   ```python
+    import yfinance as yf
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    stocks = ["RELIANCE.NS", "INFY.NS"]  # NSE tickers
+    data = yf.download(stocks, period="6mo")['Close']
+    print("Sample Stock Data:")
+    print(data.head())
+           
+# Calculate Daily Returns:
+
+   pct_change() calculates the **percentage change** between the current day's closing price and the previous day's closing price.
+
+    ```python
+    
+      # Calculating Daily Returns
+
+        daily_returns = data.pct_change() * 100  # gives value in percentage
+        print("\nDaily Returns:")
+        print(daily_returns.head())
+        
+        
+        # Plotting daily returns for Reliance
+        
+        plt.figure(figsize=(12,6))
+        plt.plot(daily_returns['RELIANCE.NS'], label="Reliance Daily Returns", color='blue')
+        plt.title("Daily Returns - Reliance")
+        plt.xlabel("Date")
+        plt.ylabel("Return (%)")
+        plt.grid(True, alpha=0.3)
+        plt.legend()
+        plt.show()
+
+#b) Calculating Moving Avg
+
+Where:
+
+- n = period (e.g., 5-day, 20-day)
+- Pt−i = closing price for day t-i
+
+**Why**: Helps **smoothen noise** and identify trends , commonly used for buy/sell signals.
+
+   ```python
+                       
+                       # Calculating the moving average of Reliance's stocks for past 20 days
+        
+                        data['RELIANCE_SMA20'] = data['RELIANCE.NS'].rolling(window=20).mean()
+                        
+                        # Plotting the closing price vs moving average graph
+                        plt.figure(figsize=(12,6))
+                        plt.plot(data['RELIANCE.NS'], label="Reliance Closing Price", color='blue')
+                        plt.plot(data['RELIANCE_SMA20'], label="20-Day SMA", color='red')
+                        plt.title("Reliance Closing Price vs 20-Day Moving Average")
+                        plt.xlabel("Date")
+                        plt.ylabel("Price (₹)")
+                        plt.legend()
+                        plt.grid(True, alpha=0.3)
+                        plt.show()
+
+
