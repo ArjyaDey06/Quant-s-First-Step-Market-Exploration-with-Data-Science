@@ -193,9 +193,10 @@ Where:
 # d) Cumulative Returns
 
 
+<img width="639" height="67" alt="image" src="https://github.com/user-attachments/assets/0ac6b168-78dc-4ccd-8ddb-e0f8e2f96222" />
+
 Why: Shows total growth of investment over time.
 
-<img width="639" height="67" alt="image" src="https://github.com/user-attachments/assets/0ac6b168-78dc-4ccd-8ddb-e0f8e2f96222" />
 
 ```python
        # Cumilative Returns
@@ -321,5 +322,6 @@ Shows distribution of daily returns — useful to **visualize risk** and skewnes
     plt.xlabel('Days')                            # X-axis label
     plt.ylabel('Price')                           # Y-axis label
     plt.show()
- ```
+   ```
 
+Linear regression is a foundational machine learning model that transforms historical data into a predictive tool, helping us find and act on the simple, underlying trends in financial markets.
