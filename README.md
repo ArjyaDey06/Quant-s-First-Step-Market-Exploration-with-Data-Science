@@ -79,7 +79,8 @@ Steps to follow:
     print(data.head())
     ```   
 #  a) Daily Returns
-
+- Measures how much a stock increased or decreased in one day.
+- This calculation is done using the closing value of the stocks.
    <img width="254" height="124" alt="image" src="https://github.com/user-attachments/assets/627dc73b-88a1-4401-ad31-0d0bd099a2d7" />
 
    Where:
@@ -130,6 +131,8 @@ Steps to follow:
    * plt.show(): This command displays the final graph.
 
 #  b) Calculating Moving Avg
+- Monitors the prices of stocks on a regular basis.
+- Smoothens the graph and helps to analyse the trend clearly.
 
 <img width="278" height="124" alt="image" src="https://github.com/user-attachments/assets/2a12f242-1db7-465a-91fd-7614fc3d7eb4" />
 
@@ -168,8 +171,19 @@ Where:
 
 
 # c) Volatility (Standard Deviation of Returns)
-
+- Volatility is a key measure of risk in finance.
+- It is a statistical measure that expresses how much a stock's price tends to swing up or down.
+- Standard deviation is a statistical term that measures how spread out a set of data points are from their average.
 <img width="330" height="152" alt="image" src="https://github.com/user-attachments/assets/6fc1ee59-4a38-446c-b105-69a80447a74d" />
+
+
+
+Where:
+
+- σ\sigmaσ = standard deviation
+- RtR_tRt = return on day t
+- Rˉ\bar{R}Rˉ = mean return
+
 
 
 * Calculating Volatility
@@ -192,7 +206,7 @@ Where:
     
 # d) Cumulative Returns
 
-
+- Cumulative return is the total percentage gain or loss of an investment over time, showing how much your money would have grown if you stayed invested.
 <img width="639" height="67" alt="image" src="https://github.com/user-attachments/assets/0ac6b168-78dc-4ccd-8ddb-e0f8e2f96222" />
 
 Why: Shows total growth of investment over time.
@@ -234,6 +248,8 @@ Why: Shows total growth of investment over time.
 
 # e) Histogram of Returns (Risk Visualization)
 
+- A histogram of returns is a bar graph that shows how often a stock had certain daily returns. The width of the histogram indicates risk: a wide graph means high risk, while a narrow one means low risk.
+
 Shows distribution of daily returns — useful to **visualize risk** and skewness.
 ```python
          # Histogram of Reliance Daily Returns
@@ -246,6 +262,22 @@ Shows distribution of daily returns — useful to **visualize risk** and skewnes
      plt.grid(True, alpha=0.3)
      plt.show()
 ```
+
+1. The Axes
+- X-Axis (Horizontal): This represents the daily return of the stock, showing the percentage of gain or loss.
+
+- Y-Axis (Vertical): This represents the frequency or the number of days a particular return occurred.
+
+2. The Key Features
+- The Peak (Center): The tallest bar on the histogram shows the most common return for the stock. For most stocks, the peak is near 0%, meaning on most days, the price doesn't change dramatically.
+
+- The Width (Risk): This is the most important indicator. The width of the histogram visually represents the stock's volatility or risk.
+
+- A wide, spread-out histogram means the stock has a large range of returns—both big gains and big losses. This indicates high risk.
+
+- A narrow, tall histogram means the returns are clustered tightly around the average, with few extreme movements. This indicates low risk.
+
+
 # d)Linear Regression for Stock Price Prediction.
 
 ## Step 1: Import dependencies
