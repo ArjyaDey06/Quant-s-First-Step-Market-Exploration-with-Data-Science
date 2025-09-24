@@ -380,3 +380,7 @@ Shows distribution of daily returns — useful to **visualize risk** and skewnes
    ```
 
 Linear regression is a foundational machine learning model that transforms historical data into a predictive tool, helping us find and act on the simple, underlying trends in financial markets.
+
+## Some useful resources
+1. The following YouTube Channel has got some amazing videos teaching about trading algo's do check out: https://youtube.com/@neurotrader888?si=DDiqBhK8WfyyzDz1
+2. Check out this video that has a very nice explaination for candelstick reading: https://youtu.be/AOz1YPOKvEs?feature=shared
