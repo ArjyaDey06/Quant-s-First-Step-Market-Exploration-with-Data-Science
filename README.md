@@ -6,7 +6,7 @@ This repository holds the contents like codes, images and ppt of DSA Club's even
 ## Table of Contents
 What are Financial Markets?
 
-Types of Financial Data
+Key Terms
 
 Quant in Action: Core Concepts
 
@@ -81,6 +81,8 @@ Steps to follow:
 #  a) Daily Returns
 - Measures how much a stock increased or decreased in one day.
 - This calculation is done using the closing value of the stocks.
+
+  
    <img width="254" height="124" alt="image" src="https://github.com/user-attachments/assets/627dc73b-88a1-4401-ad31-0d0bd099a2d7" />
 
    Where:
@@ -174,6 +176,7 @@ Where:
 - Volatility is a key measure of risk in finance.
 - It is a statistical measure that expresses how much a stock's price tends to swing up or down.
 - Standard deviation is a statistical term that measures how spread out a set of data points are from their average.
+  
 <img width="330" height="152" alt="image" src="https://github.com/user-attachments/assets/6fc1ee59-4a38-446c-b105-69a80447a74d" />
 
 
@@ -184,7 +187,27 @@ Where:
 - RtR_tRt = return on day t
 - Rˉ\bar{R}Rˉ = mean return
 
+```python
+           # Volatility of Reliance
+           
+           volatility = daily_returns.std()
+           print("\nVolatility (Std Dev of Returns):")
+           print(volatility)
+           
+           # Plot rolling 20-day volatility for Reliance
+           
+           rolling_vol = daily_returns['RELIANCE.NS'].rolling(window=20).std()
+           
+           plt.figure(figsize=(12,6))
+           plt.plot(rolling_vol, label="Reliance 20-Day Rolling Volatility", color='orange')
+           plt.title("Reliance - Rolling Volatility (20-day window)")
+           plt.xlabel("Date")
+           plt.ylabel("Volatility (%)")
+           plt.grid(True, alpha=0.3)
+           plt.legend()
+           plt.show()
 
+```
 
 * Calculating Volatility
     * volatility = daily_returns.std(): This is the main calculation. It computes the standard deviation of the daily_returns data. The standard deviation is the numerical value that represents the stock's overall volatility during the entire period.
@@ -296,7 +319,7 @@ Shows distribution of daily returns — useful to **visualize risk** and skewnes
 
 * 📌Here, we download Apple (AAPL) stock data using Yahoo Finance for a given date range.
   ```python
-    data = yf.download("AAPL", start="2023-01-01", end="2023-09-01")
+    data = yf.download("AAPL", start="2023-01-01", end="2025-01-01")
     print(data.head())  # Show first few rows to understand data structure
   ```
 ## Step 3: Prepare features and target**
@@ -331,7 +354,7 @@ Shows distribution of daily returns — useful to **visualize risk** and skewnes
    ```python
      predictions = model.predict(X_test)
    ```
-## Step 7: Evaluate model performance**
+## Step 7: Evaluate model performance.
 
  * 📌Calculate error metrics to understand how accurate our predictions are.
      ```python
