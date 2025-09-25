@@ -286,6 +286,13 @@ Shows distribution of daily returns — useful to **visualize risk** and skewnes
      plt.show()
 ```
 
+## By looking at this histogram, which company would you invest in?
+<img width="1854" height="848" alt="image" src="https://github.com/user-attachments/assets/0d105483-0654-4746-a570-daca32b5c2d2" />
+
+
+
+
+
 1. The Axes
 - X-Axis (Horizontal): This represents the daily return of the stock, showing the percentage of gain or loss.
 
