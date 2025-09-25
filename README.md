@@ -310,6 +310,10 @@ Shows distribution of daily returns — useful to **visualize risk** and skewnes
 
 # d)Linear Regression for Stock Price Prediction.
 
+
+<img width="1420" height="810" alt="image" src="https://github.com/user-attachments/assets/a5bbf9e4-478e-4515-9d3f-920f9546f4db" />
+
+
 ## Step 1: Import dependencies
 
  *📌 Import libraries needed for data handling, fetching financial data, building the model, and visualizing results.
